@@ -1,2 +1,12 @@
 # projetoByteBankAlura
-Projeto desenvolvido no curso Kotlin:Orientação a Objetos da plataforma ALURA
+- Projeto desenvolvido no curso Kotlin:Orientação a Objetos da plataforma ALURA
+- Objetivo: compreender objetos e métodos dentro de POO na linguagem Kotlin
+- Criar um sistema de banco, onde:
+    - Dados:
+      - Titular;
+      - Número da Conta;
+      - Saldo.
+    - Comportamentos: 
+      - Sacar;
+      - Depositar;
+      - Transferir.
