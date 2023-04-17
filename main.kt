@@ -1,5 +1,5 @@
 class Conta(var titular:String,var saldo:Double,var numero:Int){
-
+    var cliente = ""
 
 }
 
