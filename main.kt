@@ -1,6 +1,22 @@
 class Conta(var titular:String,var saldo:Double,var numero:Int){
-    var cliente = ""
+       
+       fun deposita(valor:Double){
+           this.saldo += valor
+       
+       
+       }
 
+       fun sacar(valor:Double){
+            if(saldo >= valor){
+                this.saldo -= valor
+            }   
+            if(saldo < valor){
+                println("NÃO FOI POSSÍVEL REALIZAR O SAQUE")
+                println("SALDO INSUCIENTE")
+            }
+           
+       }
+       
 }
 
 fun main(){
@@ -23,6 +39,10 @@ fun main(){
     println("Número:${contaMaria.numero}")
     println("Saldo:${contaMaria.saldo}")
     println()
+    
+    println("SALDO SENDO REALIZADO DA CONTA: $contaMaria.titular")
+    contaMaria.sacar(250.50)
+    println("SALDO ATUAL: $contaMaria.saldo")
 
 
 
