@@ -3,11 +3,7 @@ class Conta() {
     var titular = ""
     var numero = 0
     var saldo = 0.0
-        private set(valor) {
-            if (valor > 0){
-                field = valor
-            }
-        }
+        private set
 
 
     //MÉTODO PARA DEPOSITAR VALOR NA CONTA
