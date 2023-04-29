@@ -1,10 +1,9 @@
-class Conta() {
-
-    var titular = ""
-    var numero = 0
+class Conta(
+    var titular: String,
+    val numero: Int
+) {
     var saldo = 0.0
         private set
-
 
     //MÉTODO PARA DEPOSITAR VALOR NA CONTA
 
@@ -41,14 +40,9 @@ fun main() {
     println(" ---------- Bem Vindo ao ByteBank ----------")
     println()
     //instanciando os objetos: contaLeonardo, contaMaria
-    val contaLeonardo = Conta()
-    contaLeonardo.titular = "Leonardo"
-    contaLeonardo.numero = 1000
-
-
-    val contaMaria = Conta()
-    contaMaria.titular = "Maria"
-    contaMaria.numero = 1001
+    val contaLeonardo = Conta(titular = "LEONARDO", numero = 1000)
+    val contaMaria = Conta(titular = "MARIA", numero = 1001)
+    val contaJulio = Conta(titular = "JULIO", numero = 1002)
 
 
     println("Seja Bem Vindo(a) ${contaLeonardo.titular}")
@@ -70,12 +64,19 @@ fun main() {
     println("SALDO ATUAL: ${contaMaria.saldo}")
     println()
 
+    println("Seja Bem Vindo(a) ${contaJulio.titular}")
+    println("Titular: ${contaJulio.titular}")
+    println("Número: ${contaJulio.numero}")
+    println("Saldo: ${contaJulio.saldo}")
+    println()
     println("SAQUE SENDO REALIZADO NA CONTA: ${contaMaria.titular}")
     contaMaria.sacar(3.50)
     println("SALDO ATUAL: ${contaMaria.saldo}")
 
     println("TRANSFERENCIA DA CONTA: ${contaLeonardo.titular} PARA A CONTA: ${contaMaria.titular}")
-    contaLeonardo.transfere(25.0, contaMaria)
+    contaLeonardo.transfere(valor = 25.0, destino = contaMaria)
     println("SALDO ATUAL DA CONTA MARIA: ${contaMaria.saldo}")
 
 }
+
+
